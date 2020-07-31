@@ -13,13 +13,19 @@
             width: 100%;
             /* max-width: 100%; */
         }
+        #about {
+            background-color: #f9d56e;
+            width: 100%;
+        }
         .container {
             width: 1200px;
             margin: auto;
         }
         .box {
             float: left;
-            width: 400px;
+            /* width: 400px; */
+            /* width: 33.3333%; */
+            width: calc(100% / 3);
             padding: 10px;
            
         }
@@ -31,32 +37,33 @@
     </style>
 </head>
 <body>
-    <div class="container clearfix">
-        <div class="box">
-            <img src="https://picsum.photos/id/38/800/600" alt="">
-            <h2>title</h2>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque esse, saepe tempora minus nemo nesciunt accusantium ut consectetur harum veniam ratione vel eligendi assumenda deleniti quaerat! Quisquam nam vero provident.
-            </p>
-            <a href="#">link</a>
+    <div id="about">
+        <div class="container clearfix">
+            <div class="box">
+                <img src="https://picsum.photos/id/38/800/600" alt="">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque esse, saepe tempora minus nemo nesciunt accusantium ut consectetur harum veniam ratione vel eligendi assumenda deleniti quaerat! Quisquam nam vero provident.
+                </p>
+                <a href="#">link</a>
+            </div>
+            <div class="box">
+                <img src="https://picsum.photos/id/48/800/600" alt="">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque esse, saepe tempora minus nemo nesciunt accusantium ut consectetur harum veniam ratione vel eligendi assumenda deleniti quaerat! Quisquam nam vero provident.
+                </p>
+                <a href="#">link</a>
+            </div>
+            <div class="box">
+                <img src="https://picsum.photos/id/58/800/600" alt="">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque esse, saepe tempora minus nemo nesciunt accusantium ut consectetur harum veniam ratione vel eligendi assumenda deleniti quaerat! Quisquam nam vero provident.
+                </p>
+                <a href="#">link</a>
+            </div>
         </div>
-        <div class="box">
-            <img src="https://picsum.photos/id/48/800/600" alt="">
-            <h2>title</h2>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque esse, saepe tempora minus nemo nesciunt accusantium ut consectetur harum veniam ratione vel eligendi assumenda deleniti quaerat! Quisquam nam vero provident.
-            </p>
-            <a href="#">link</a>
-        </div>
-        <div class="box">
-            <img src="https://picsum.photos/id/58/800/600" alt="">
-            <h2>title</h2>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque esse, saepe tempora minus nemo nesciunt accusantium ut consectetur harum veniam ratione vel eligendi assumenda deleniti quaerat! Quisquam nam vero provident.
-            </p>
-            <a href="#">link</a>
-        </div>
-
     </div>
 </body>
 </html>
