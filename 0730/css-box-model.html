@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 300px;
+            background-color: #d1edff;
+            /* border-color: red; */
+            /* border-width: 5px; */
+            /* border-style: solid; */
+            /* border-left-color: red; */
+            /* border-left-width: 5px; */
+            /* border-left-style: solid; */
+            border: 10px solid red;
+            /* border-left: red 5px solid; */
+            /* border-right: red 5px solid; */
+            /*  
+                solid,double,dotted,dashed
+                inset,outset,groove,ridge
+            */
+            /* padding: 30px; */
+            /* padding-left: 50px; */
+            /* padding-bottom: 50px; */
+
+            /* margin: 50px; */
+            /* margin: 50px; */
+            /* padding: 50px; */
+
+            padding: 15px; /*上下左右*/
+            padding: 15px 0; /*上下 左右 */
+            padding: 15px 0 60px; /*上 左右 下*/
+            padding: 15px 0 60px 30px; /*上 右 下 左*/
+
+            display: block;
+            /* inline,block */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        行內元素
+        1. 沒有寬度、高度
+        2. padding跟border 上下視覺看得見，但不會占空間
+        3. margin沒有上下
+
+     -->
+    <h1>box model</h1>
+    <span class="box">span</span>
+    <div class="box">
+        box model
+    </div>
+    <div class="box">
+        box model
+    </div>
+    <span class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, pariatur?</span>
+    <span class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, pariatur?</span>
+</body>
+</html>
