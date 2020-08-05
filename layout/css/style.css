@@ -163,3 +163,13 @@ label {
 #form .btn:hover {
     background-color: #0575d8;
 }
+/* footer */
+footer {
+    background-color: #222;
+    color: #eee;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+footer .info {
+    text-align: right;
+}

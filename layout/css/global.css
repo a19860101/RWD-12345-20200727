@@ -10,3 +10,15 @@ img {
 	vertical-align: top;
 	/* display: block; */
 }
+.t-left {
+	text-align: left;
+}
+.t-center {
+	text-align: center;
+}
+.t-right {
+	text-align: right;
+}
+.t-justify {
+	text-align: justify;
+}
