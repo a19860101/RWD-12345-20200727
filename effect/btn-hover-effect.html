@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: "Microsoft Jhenghei";
+        }
+        .btn {
+            display: inline-block;
+            /* width: 150px; */
+            /* height: 50px; */
+            padding: 13px 30px;
+            text-decoration: none;
+            background-color: #222;
+            color: #eee;
+            position: relative;
+        }
+        .btn::after {
+            content:"";
+            display: inline-block;
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            background-color: #e8505b;
+            top: 0;
+            left: 0;
+            transition: .5s;
+        }
+
+        .btn:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="btn">
+        點我點我!!    
+    </a>
+</body>
+</html>
