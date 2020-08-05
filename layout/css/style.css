@@ -132,7 +132,12 @@ header h1 {
     width: 100%;
     font-size: 16px;
     padding: 10px;
-    border-radius: 5px
+    border-radius: 5px;
+    transition: .5s;
+}
+.form-control:focus {
+    border-color:#2080ff;
+    background-color: #d0e4ff;
 }
 label {
     margin-bottom: 5px;
@@ -151,4 +156,10 @@ label {
     background-color: #035aa6;
     border-radius: 5px;
     color: #fff;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 16px;
+}
+#form .btn:hover {
+    background-color: #0575d8;
 }
