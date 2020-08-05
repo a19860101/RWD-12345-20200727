@@ -16,15 +16,18 @@
             text-align: center;
             line-height: 50px;
             /* transition: 2s 0s linear; */
-            transition-property: background-color,width;
-            transition-duration: 3s;
-            transition-delay: 0s;
-            transition-timing-function: ease;
+            /* transition-property:width,height,background-color; */
+            /* transition-duration: .5s; */
+            /* transition-delay: 0s,.5s,1s; */
+            /* transition-timing-function: ease; */
             /* ease,ease-in,ease-out,ease-in-out,linear */
+
+            transition: width .5s 0s,height .5s .5s,background-color .5s 1s;
         }
         .box:hover {
             background-color: #16817a;
-            width: 1000px;
+            width: 400px;
+            height: 400px;
         }
     </style>
 </head>
