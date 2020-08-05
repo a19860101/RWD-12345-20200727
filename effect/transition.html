@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: "Segoe UI";
+        }
+        .box {
+            width: 300px;
+            height: 50px;
+            background-color: #fa744f;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            /* transition: 2s 0s linear; */
+            transition-property: background-color,width;
+            transition-duration: 3s;
+            transition-delay: 0s;
+            transition-timing-function: ease;
+            /* ease,ease-in,ease-out,ease-in-out,linear */
+        }
+        .box:hover {
+            background-color: #16817a;
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        hello transition!!
+    </div>
+</body>
+</html>
