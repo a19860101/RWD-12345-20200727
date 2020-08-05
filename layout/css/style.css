@@ -121,3 +121,34 @@ header h1 {
     width: 60px;
     color: #ff5f40;
 }
+/* form */
+
+.form-group {
+    margin-bottom: 10px;
+}
+.form-control {
+    border: 1px solid #aaa;
+    outline: 0;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px
+}
+label {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+#form {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#form .row {
+    justify-content: center;
+}
+#form .btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #035aa6;
+    border-radius: 5px;
+    color: #fff;
+}
