@@ -11,9 +11,22 @@
             background-color: #d9455f;
             transform-origin: left;
 
-            animation-name: a1;
-            animation-duration: 3s;
+            animation-name: move;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            /* normal,reverse,alternate,alternate-reverse */
+            animation-timing-function: ease;
+            /* ease,ease-in,ease-out,ease-in-out,linear */
+
             
+        }
+        @keyframes move {
+            to {
+                transform: translateX(600px);
+            }
         }
         @keyframes a1 {
             from {
