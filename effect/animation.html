@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #d9455f;
+            transform-origin: left;
+
+            animation-name: a1;
+            animation-duration: 3s;
+            
+        }
+        @keyframes a1 {
+            from {
+                transform: scaleX(1);
+                /* width: 200px; */
+            }
+            to {
+                transform: scaleX(4);
+                /* width: 800px; */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
