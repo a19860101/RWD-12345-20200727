@@ -9,25 +9,34 @@
             width: 200px;
             height: 200px;
             background-color: #d9455f;
-            transform-origin: left;
+            /* transform-origin: left; */
 
-            animation-name: move;
-            animation-duration: 1s;
-            animation-delay: 0s;
-            animation-fill-mode: forwards;
-            animation-iteration-count: infinite;
-            animation-direction: normal;
+            /* animation-name: move; */
+            /* animation-duration: 1s; */
+            /* animation-delay: 0s; */
+            /* animation-fill-mode: forwards; */
+            /* animation-iteration-count: infinite; */
+            /* animation-direction: normal; */
             /* normal,reverse,alternate,alternate-reverse */
-            animation-timing-function: ease;
+            /* animation-timing-function: ease; */
             /* ease,ease-in,ease-out,ease-in-out,linear */
 
-            
+            animation: square 5s infinite;           
         }
+        @keyframes square {
+            0% {}
+            25% {transform: translateX(600px)translateY(0)rotateZ(90deg);}
+            50% {transform: translateX(600px)translateY(600px)rotateZ(180deg);}
+            75% {transform: translateX(0)translateY(600px)rotateZ(270deg);}
+            100% {transform: translateX(0)translateY(0)rotateZ(360deg);}
+        }
+        
         @keyframes move {
             to {
                 transform: translateX(600px);
             }
         }
+
         @keyframes a1 {
             from {
                 transform: scaleX(1);
