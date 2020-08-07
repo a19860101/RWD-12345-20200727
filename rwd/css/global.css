@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: "Gill Sans MT","Microsoft Jhenghei";
+	box-sizing: border-box;
+}
+img {
+	width: 100%;
+	vertical-align: top;
+	/* display: block; */
+}
+.t-left {
+	text-align: left;
+}
+.t-center {
+	text-align: center;
+}
+.t-right {
+	text-align: right;
+}
+.t-justify {
+	text-align: justify;
+}
