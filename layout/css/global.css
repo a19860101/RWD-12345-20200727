@@ -64,3 +64,33 @@ img {
 		text-align: justify;
 	}
 }
+.order-1 {order:1;}
+.order-2 {order:2;}
+.order-3 {order:3;}
+.order-4 {order:4;}
+.order-5 {order:5;}
+.order-6 {order:6;}
+@media(min-width:600px){
+	.order-sm-1 {order:1;}
+	.order-sm-2 {order:2;}
+	.order-sm-3 {order:3;}
+	.order-sm-4 {order:4;}
+	.order-sm-5 {order:5;}
+	.order-sm-6 {order:6;}
+}
+@media(min-width:960px){
+	.order-md-1 {order:1;}
+	.order-md-2 {order:2;}
+	.order-md-3 {order:3;}
+	.order-md-4 {order:4;}
+	.order-md-5 {order:5;}
+	.order-md-6 {order:6;}
+}
+@media(min-width:1200px){
+	.order-lg-1 {order:1;}
+	.order-lg-2 {order:2;}
+	.order-lg-3 {order:3;}
+	.order-lg-4 {order:4;}
+	.order-lg-5 {order:5;}
+	.order-lg-6 {order:6;}
+}
