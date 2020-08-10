@@ -16,7 +16,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-
+    <style>
+        .carousel-indicators li {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #d54062;
+        }
+        .carousel-indicators {
+            bottom: -50px
+        }
+    </style>
 </head>
 
 <body>
@@ -47,7 +57,14 @@
             </ul>
         </div>
     </nav>
-    <div id="slider" class="carousel slide" data-ride="carousel">
+    <div id="slider" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#slider" data-slide-to="0" class="active"></li>
+            <li data-target="#slider" data-slide-to="1"></li>
+            <li data-target="#slider" data-slide-to="2"></li>
+            <li data-target="#slider" data-slide-to="3"></li>
+            <li data-target="#slider" data-slide-to="4"></li>
+        </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="https://picsum.photos/id/13/1600/800" class="d-block w-100">
