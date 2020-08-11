@@ -40,6 +40,18 @@
             padding-top: 100px;
             padding-bottom: 100px;
         }
+        #contact {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: #ffeebe;
+        }
+        .form-control {
+            transition: .3s;
+        }
+        .form-control:focus {
+            box-shadow: 0 0 0 0.2rem rgba(255, 217, 0, 0.5);
+            background-color: #fff5db;
+        }
     </style>
 </head>
 
@@ -199,7 +211,7 @@
             </div>
             <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
                 <ul class="list-group">
-                    <li class="list-group-item">item 1</li>
+                    <li class="list-group-item active">item 1</li>
                     <li class="list-group-item">item 2</li>
                     <li class="list-group-item">item 3</li>
                     <li class="list-group-item">item 4</li>
@@ -208,7 +220,7 @@
             </div>
             <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
                 <ul class="list-group">
-                    <li class="list-group-item">item 6</li>
+                    <li class="list-group-item active">item 6</li>
                     <li class="list-group-item">item 7</li>
                     <li class="list-group-item">item 8</li>
                     <li class="list-group-item">item 9</li>
@@ -217,7 +229,7 @@
             </div>
             <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
                 <ul class="list-group">
-                    <li class="list-group-item">item 11</li>
+                    <li class="list-group-item active">item 11</li>
                     <li class="list-group-item">item 12</li>
                     <li class="list-group-item">item 13</li>
                     <li class="list-group-item">item 14</li>
@@ -226,12 +238,43 @@
             </div>
             <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
                 <ul class="list-group">
-                    <li class="list-group-item">item 16</li>
+                    <li class="list-group-item active">item 16</li>
                     <li class="list-group-item">item 17</li>
                     <li class="list-group-item">item 18</li>
                     <li class="list-group-item">item 19</li>
                     <li class="list-group-item">item 20</li>
                 </ul>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 mb-5">
+                    <h2 class="display-4 text-center">Contact</h2>
+                    <p class="lead text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, expedita?</p>
+                </div>
+                <div class="col-10">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="">姓名</label>
+                            <input type="text" class="form-control border-0">
+                        </div>
+                        <div class="form-group">
+                            <label for="">電話</label>
+                            <input type="text" class="form-control border-0">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input type="text" class="form-control border-0">
+                        </div>
+                        <div class="form-group">
+                            <label for="">內容</label>
+                            <textarea cols="30" rows="10" class="form-control border-0"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-warning" value="送出">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
