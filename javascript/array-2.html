@@ -8,7 +8,7 @@
 <body>
     <script>
         let a = ['紅茶','綠茶','奶茶','冰淇淋紅茶','珍珠奶茶'];
-        
+        let b = ['鬆餅','奶烙'];
         a.push('梅子綠茶');
         a.pop();
         a.unshift('拿鐵');
@@ -39,6 +39,9 @@
         let a2 = a.reverse();
         console.log(a2);
 
+        // let c = a.concat(b);
+        let c = b.concat(a);
+        console.log(c);
     </script>
 </body>
 </html>
