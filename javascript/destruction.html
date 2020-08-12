@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //陣列解構
+        const drinks = ['紅茶','綠茶','奶茶','冰淇淋紅茶','珍珠奶茶'];
+
+        const [d1] = drinks;
+        const [,,d3] = drinks;
+
+        console.log(d3);
+        //物件解構
+        const user = {
+            name: 'John',
+            mail: 'asdf@gmail.com',
+            age: 18,
+            gender: '男'
+        }
+        const {name,mail} = user;
+        console.log(name);
+        console.log(mail);
+    </script>
+</body>
+</html>
