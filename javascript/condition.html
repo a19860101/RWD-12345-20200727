@@ -27,7 +27,7 @@
             console.log('errror');
         }
 
-        let a = 654;
+        let a = 0;
         switch(a){
             case 0:
                 console.log(0);
@@ -37,6 +37,17 @@
                 break;
             case 2:
                 console.log(2);
+                break;
+            default:
+                console.log('error');
+        }
+
+        switch(true){
+            case a>0:
+                console.log('正數');
+                break;
+            case a<0:
+                console.log('負數');
                 break;
             default:
                 console.log('error');
