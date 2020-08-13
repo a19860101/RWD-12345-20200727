@@ -9,23 +9,25 @@
     <script>
         
         //Function Statement 函式陳述式 -> 提升性 hoisting
-        function test(){
-            console.log('hello test');
+        function test(x,y,z){
+            // console.log('hello test');
+            console.log(x+y+x);
         }
-        test();
-        
+        test(1,2,3);
+
         //Function Expression 函式表達式
-        const test2 = function(){
-            console.log('hello test2');
+        const test2 = function(x){
+            // console.log('hello test2');
+            console.log(x);
         }
-        test2();
+        test2(999);
 
         //Arrow Function  箭頭函式
 
-        const test3 = () => {
-            console.log('hello test3');
+        const test3 = (x) => {
+            console.log(x);
         }
-        test3();
+        test3('hello');
 
     </script>
 </body>
