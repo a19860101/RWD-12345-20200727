@@ -36,11 +36,27 @@
             data.style.color = 'orange';
         }
 
+        // list.forEach(function(){})
+
         let a = document.getElementsByTagName('a');
         console.log(a);
         for(data of a){
             data.style.backgroundColor = 'blue';
         }
+
+
+        // let el = document.querySelector('#title');
+        let el = document.querySelectorAll('.list');
+        console.log(el);
+        // for(let i=0;i<el.length;i++){
+        //     console.log(el[i]);
+        // }
+        // for(data of el){
+        //     console.log(data);
+        // }
+        el.forEach(function(data){
+            console.log(data);
+        })
     </script>
 </body>
 </html>
