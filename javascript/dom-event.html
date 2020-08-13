@@ -8,6 +8,7 @@
 <body>
     <button onclick="go()">click 1</button>
     <button id="btn">click 2</button>
+    <button id="btn2">click 3</button>
     <div id="output">HELLO</div>
     <script>
         function go(){
@@ -22,6 +23,16 @@
             // output.style.color = 'blue';
             output.textContent = 'Javascript!!!!!!!!!';
         }
+
+        let btn2 = document.querySelector('#btn2');
+        // btn2.addEventListener('click',go);
+        btn2.addEventListener('click',function(){
+            // go();
+            let output = document.querySelector('#output');
+            output.style.color = 'red';
+            output.append('Javascript!!!');
+
+        });
     </script>
 </body>
 </html>
