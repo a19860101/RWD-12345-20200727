@@ -21,12 +21,26 @@
     <script>
         let title = document.getElementById('title');
         console.log(title);
+        title.style.color = 'red';
+        title.style.backgroundColor = 'green';
+        title.style.textDecoration = 'underline'
 
         let list = document.getElementsByClassName('list');
         console.log(list);
-        
+        // for(let i=0;i<list.length;i++){
+        //     console.log(list[i]);
+        //     list[i].style.color = 'orange';
+        // }        
+
+        for(data of list){
+            data.style.color = 'orange';
+        }
+
         let a = document.getElementsByTagName('a');
         console.log(a);
+        for(data of a){
+            data.style.backgroundColor = 'blue';
+        }
     </script>
 </body>
 </html>
