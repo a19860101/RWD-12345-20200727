@@ -36,6 +36,16 @@
             data.style.color = 'orange';
         }
 
+        [...list].forEach(function(data){
+            console.log(data,'qqq');
+            data.style.listStyle = 'cjk-ideographic';
+        })
+        // const myList = [...list];
+        // // console.log(myList,'test');
+        // myList.forEach(function(data){
+        //     console.log(data);
+        // })
+
         // list.forEach(function(){})
 
         let a = document.getElementsByTagName('a');
