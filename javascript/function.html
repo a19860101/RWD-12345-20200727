@@ -7,15 +7,26 @@
 </head>
 <body>
     <script>
+        
+        //Function Statement 函式陳述式 -> 提升性 hoisting
         function test(){
             console.log('hello test');
         }
-
+        test();
+        
+        //Function Expression 函式表達式
         const test2 = function(){
             console.log('hello test2');
         }
-        test();
-        test2(); 
+        test2();
+
+        //Arrow Function  箭頭函式
+
+        const test3 = () => {
+            console.log('hello test3');
+        }
+        test3();
+
     </script>
 </body>
 </html>
