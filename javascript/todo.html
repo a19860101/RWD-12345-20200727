@@ -13,10 +13,10 @@
                 <h1>Todo List</h1>
                 <div class="row my-5">
                     <div class="col-10">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" id="input">
                     </div>
                     <div class="col-2">
-                        <button class="btn btn-primary btn-block">新增</button>
+                        <button class="btn btn-primary btn-block" onclick="add()">新增</button>
                     </div>
                 </div>
                 <ul class="list-group">
@@ -30,5 +30,15 @@
             </div>
         </div>
     </div>
+    <script>
+        function add(){
+            let input = document.querySelector('#input').value;
+            console.log(input);
+            
+            let listGroup = document.querySelector('.list-group');
+            listGroup.append(input);
+        }
+
+    </script>
 </body>
 </html>
