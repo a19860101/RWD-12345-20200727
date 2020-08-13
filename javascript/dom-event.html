@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="go()">click 1</button>
+    <button id="btn">click 2</button>
+    <div id="output">HELLO</div>
+    <script>
+        function go(){
+            let output = document.querySelector('#output');
+            output.style.color = 'red';
+        }
+
+        document.querySelector('#btn').onclick = function(){
+            let output = document.querySelector('#output');
+            output.style.color = 'blue';
+        }
+    </script>
+</body>
+</html>
