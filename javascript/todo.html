@@ -22,9 +22,11 @@
                 <ul class="list-group">
                     <li class="list-group-item">
                         吃飯
+                        <a href="#" class="del btn btn-danger btn-sm float-right">刪除</a>
                     </li>
                     <li class="list-group-item">
                         洗衣服
+                        <a href="#" class="del btn btn-danger btn-sm float-right">刪除</a>
                     </li>
                 </ul>
             </div>
@@ -36,9 +38,16 @@
             console.log(input);
 
             let listGroup = document.querySelector('.list-group');
+            
             let li = document.createElement('li');
             li.classList.add('list-group-item');
             li.append(input);
+            
+            let a = document.createElement('a');
+            a.classList.add('del','btn','btn-danger','btn-sm','float-right');
+            a.append('刪除')
+            li.append(a);
+
             listGroup.appendChild(li);
 
             document.querySelector('#input').value = '';
