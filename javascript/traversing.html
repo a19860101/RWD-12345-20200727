@@ -34,8 +34,22 @@
         //同輩元素
         let content = document.querySelector('#content');
         // console.log(content);
-        console.log(content.nextElementSibling);
-        console.log(content.previousElementSibling);
+        // console.log(content.nextElementSibling);
+        // console.log(content.previousElementSibling);
+        // console.log(content.nextSibling);
+        // console.log(content.previousSibling);
+
+        let lists = document.querySelector('.lists');
+        // console.log(lists);
+        // console.log(lists.children);
+        // console.log(lists.childNodes);
+
+        // for(data of lists.children){
+        //     console.log(data);
+        // }
+        [...lists.children].forEach(function(data){
+            console.log(data);
+        })
     </script>
 </body>
 </html>
