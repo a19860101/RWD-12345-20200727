@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Hello Javascript</h1>
+    <p id="content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, recusandae! Eos vitae illum esse modi expedita dignissimos quidem minus est, beatae fugit commodi doloribus saepe excepturi accusamus dolores enim facere.
+    </p>
+    <a href="#">link</a>
+    <ul class="lists">
+        <li class="list">
+            <a href="#" class="list-link">list 1</a>
+        </li>
+        <li class="list">
+            <a href="#" class="list-link">list 2</a>
+        </li>
+        <li class="list">
+            <a href="#" class="list-link">list 3</a>
+        </li>
+        <li class="list">
+            <a href="#" class="list-link">list 4</a>
+        </li>
+    </ul>
+    <script>
+        //父元素
+        let link = document.querySelector('.list-link');
+        // console.log(link.parentElement);
+        // console.log(link.parentNode);
+
+        //同輩元素
+        let content = document.querySelector('#content');
+        // console.log(content);
+        console.log(content.nextElementSibling);
+        console.log(content.previousElementSibling);
+    </script>
+</body>
+</html>
