@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        .list-item {
+            transition: .3s;
+        }
+        .complete {
+            background-color: #aaa;
+            text-decoration: line-through;
+            transition: .3s;
+        }
+
+    </style>
 </head>
 <body>
     <div class="container">
@@ -20,11 +31,11 @@
                     </div>
                 </div>
                 <ul class="list-group">
-                    <li class="list-group-item">
+                    <li class="list-item list-group-item">
                         吃飯
                         <a href="#" class="del btn btn-danger btn-sm float-right">刪除</a>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-item list-group-item complete">
                         洗衣服
                         <a href="#" class="del btn btn-danger btn-sm float-right">刪除</a>
                     </li>
@@ -40,7 +51,7 @@
             let listGroup = document.querySelector('.list-group');
             
             let li = document.createElement('li');
-            li.classList.add('list-group-item');
+            li.classList.add('list-group-item','list-item');
             li.append(input);
             
             let a = document.createElement('a');
@@ -60,6 +71,10 @@
             // console.log(e.target.classNamdel btn btn-danger btn-sm float-righte);
             if(e.target.className.indexOf('del') > -1){
                 e.target.parentElement.remove();
+            }
+
+            if(e.target.className.indexOf('list-item') > -1){
+                e.target.classList.toggle('complete');
             }
         }
 
