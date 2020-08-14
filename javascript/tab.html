@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: "Segoe UI";
+            margin: 0;
+            padding: 0;
+        }
+        #tabs {
+            width: 600px;
+            margin: auto;
+        }
+        .tab-nav {
+            background-color: #aaa;
+            display: flex;
+        }
+        .tab-link {
+            text-decoration: none;
+            display: block;
+            padding: 15px;
+            color: #000;
+        }
+        .tab-link.active {
+            background-color: #ccc;
+        }
+        .tab-panel {
+            background-color: #ccc;
+            padding: 15px;
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="tabs">
+        <div class="tab-nav">
+            <a href="#" class="tab-link active">Tab 1</a>
+            <a href="#" class="tab-link">Tab 2</a>
+            <a href="#" class="tab-link">Tab 3</a>
+            <a href="#" class="tab-link">Tab 4</a>
+        </div>
+        <div id="tab-1" class="tab-panel active">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
+            </p>
+        </div>
+        <div id="tab-1" class="tab-panel">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
+            </p>
+        </div>
+        <div id="tab-1" class="tab-panel">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
+            </p>
+        </div>
+        <div id="tab-1" class="tab-panel">
+            <h2>title 4</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

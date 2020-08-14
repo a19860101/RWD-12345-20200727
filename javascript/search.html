@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" onkeyup="search()">
+    <ul>
+        <li>商務襯衫</li>
+        <li>休閒襯衫</li>
+        <li>棉麻襯衫</li>
+        <li>牛津襯衫</li>
+        <li>格紋襯衫</li>
+        <li>法蘭絨襯衫</li>
+        <li>抗UV系列</li>
+        <li>風衣外套</li>
+        <li>休閒外套</li>
+        <li>針織外套</li>
+    </ul>
+    <script>
+        function search(){
+            let input = document.querySelector('#input').value;
+            let li = document.querySelectorAll('li');
+            li.forEach(function(data){
+                if(data.textContent.toUpperCase().indexOf(input.toUpperCase()) > -1){
+                    data.style.display = '';
+                }else{
+                    data.style.display = 'none';
+                }
+            })
+        }
+
+        
+
+    </script>
+</body>
+</html>
