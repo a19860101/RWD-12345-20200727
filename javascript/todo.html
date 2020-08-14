@@ -57,9 +57,9 @@
             // console.log(e);
             // console.log(e.target);
             // console.log(e.target.classList);
-            // console.log(e.target.className);
+            // console.log(e.target.classNamdel btn btn-danger btn-sm float-righte);
             if(e.target.className.indexOf('del') > -1){
-                console.log('delete');
+                e.target.parentElement.remove();
             }
         }
 
