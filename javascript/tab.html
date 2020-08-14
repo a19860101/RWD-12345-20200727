@@ -40,10 +40,10 @@
 <body>
     <div id="tabs">
         <div class="tab-nav">
-            <a href="#" class="tab-link active">Tab 1</a>
-            <a href="#" class="tab-link">Tab 2</a>
-            <a href="#" class="tab-link">Tab 3</a>
-            <a href="#" class="tab-link">Tab 4</a>
+            <a href="#tab-1" class="tab-link active">Tab 1</a>
+            <a href="#tab-2" class="tab-link">Tab 2</a>
+            <a href="#tab-3" class="tab-link">Tab 3</a>
+            <a href="#tab-4" class="tab-link">Tab 4</a>
         </div>
         <div id="tab-1" class="tab-panel active">
             <h2>title 1</h2>
@@ -51,7 +51,7 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
             </p>
         </div>
-        <div id="tab-1" class="tab-panel">
+        <div id="tab-2" class="tab-panel">
             <h2>title 2</h2>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
@@ -59,19 +59,36 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
             </p>
         </div>
-        <div id="tab-1" class="tab-panel">
+        <div id="tab-3" class="tab-panel">
             <h2>title 3</h2>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
             </p>
         </div>
-        <div id="tab-1" class="tab-panel">
+        <div id="tab-4" class="tab-panel">
             <h2>title 4</h2>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
             </p>
         </div>
     </div>
+    <script>
+        let tabLink = document.querySelectorAll('.tab-link');
+        tabLink.forEach(function(tLink){
+            tLink.onclick = function(e){
+                let href = e.target.getAttribute('href');
+                console.log(href);
+                let tabPanel = document.querySelectorAll('.tab-panel');
+                tabPanel.forEach(function(tPanel){
+                    if('#' + tPanel.id === href){
+                        tPanel.classList.add('active');
+                    }else{
+                        tPanel.classList.remove('active');
+                    }
+                })
+            }
+        })
+    </script>
 </body>
 </html>
