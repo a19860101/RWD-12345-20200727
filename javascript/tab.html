@@ -23,9 +23,11 @@
             display: block;
             padding: 15px;
             color: #000;
+            transition: .5s;
         }
         .tab-link.active {
             background-color: #ccc;
+            transition: .5s;
         }
         .tab-panel {
             background-color: #ccc;
@@ -77,8 +79,13 @@
         let tabLink = document.querySelectorAll('.tab-link');
         tabLink.forEach(function(tLink){
             tLink.onclick = function(e){
+
+                tabLink.forEach(function(t){
+                    t.classList.remove('active');
+                })
+                e.target.classList.add('active');
+
                 let href = e.target.getAttribute('href');
-                console.log(href);
                 let tabPanel = document.querySelectorAll('.tab-panel');
                 tabPanel.forEach(function(tPanel){
                     if('#' + tPanel.id === href){
