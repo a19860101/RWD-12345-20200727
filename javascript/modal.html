@@ -22,6 +22,7 @@
         }
         .modal.active{
             display: flex;
+            animation: fade-in 1s;
         }
         .modal-overlay {
             position: fixed;
@@ -38,6 +39,11 @@
             position: relative;
             padding: 30px;
             /* top: 200px; */
+        }
+        @keyframes fade-in{
+            from {
+                opacity: 0;
+            }
         }
     </style>
 </head>
@@ -56,7 +62,7 @@
                 </p>
             </div>
             <div class="modal-footer">
-                <a href="#">Close</a>
+                <a href="#" class="modal-close">Close</a>
             </div>
         </div>
     </div>
@@ -73,7 +79,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <a href="#">Close</a>
+                <a href="#" class="modal-close">Close</a>
             </div>
         </div>
     </div>
@@ -87,6 +93,14 @@
                 document.querySelector(open).classList.add('active');
             }
         })
+        document.onclick = function(data){
+            if(data.target.className == 'modal-close'){
+                let modal = document.querySelectorAll('.modal');
+                modal.forEach(function(m){
+                    m.classList.remove('active');
+                })
+            }
+        }
     </script>
 </body>
 </html>
