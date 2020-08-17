@@ -21,6 +21,17 @@
             <img src="images/4630105_500.jpg" alt="">
         </div>
     </div>
-
+    <script>
+        const thumbs = document.querySelector('.thumbs').children;
+        // console.log(thumbs);
+        for(t of thumbs){
+            t.onclick = function(data){
+                // console.log(data.target);
+                // let src = data.target.src;
+                let src = data.target.getAttribute('src');
+                document.querySelector('.gallery').children[0].setAttribute('src',src);
+            }
+        }
+    </script>
 </body>
 </html>
