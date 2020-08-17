@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('h2').click(function(){
+                $(this).next().toggle(600);
+            });
+        })
+    </script>
+    <style>
+        .container {
+            width: 600px;
+            margin: auto;
+        }
+        p {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>title 1</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aspernatur eum fuga odio voluptas veniam unde quia dolorem, est fugit sapiente mollitia consectetur cupiditate quasi quos, ex nulla officia tempora.
+        </p>
+        <h2>title 2</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aspernatur eum fuga odio voluptas veniam unde quia dolorem, est fugit sapiente mollitia consectetur cupiditate quasi quos, ex nulla officia tempora.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aspernatur eum fuga odio voluptas veniam unde quia dolorem, est fugit sapiente mollitia consectetur cupiditate quasi quos, ex nulla officia tempora.
+        </p>
+        <h2>title 3</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aspernatur eum fuga odio voluptas veniam unde quia dolorem, est fugit sapiente mollitia consectetur cupiditate quasi quos, ex nulla officia tempora.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aspernatur eum fuga odio voluptas veniam unde quia dolorem, est fugit sapiente mollitia consectetur cupiditate quasi quos, ex nulla officia tempora.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aspernatur eum fuga odio voluptas veniam unde quia dolorem, est fugit sapiente mollitia consectetur cupiditate quasi quos, ex nulla officia tempora.
+        </p>
+        <h2>title 4</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aspernatur eum fuga odio voluptas veniam unde quia dolorem, est fugit sapiente mollitia consectetur cupiditate quasi quos, ex nulla officia tempora.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aspernatur eum fuga odio voluptas veniam unde quia dolorem, est fugit sapiente mollitia consectetur cupiditate quasi quos, ex nulla officia tempora.
+        </p>
+
+    </div>
+</body>
+</html>
