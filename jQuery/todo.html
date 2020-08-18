@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        .list-item {
+            transition: .3s;
+        }
+        .list-itme.complete {
+            background-color: #aaa;
+            text-decoration: line-through;
+            transition: .3s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <h1>Todo List</h1>
+                <div class="row my-5">
+                    <div class="col-10">
+                        <input type="text" class="form-control" id="input">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-primary btn-block" id="add">新增</button>
+                    </div>
+                </div>
+                <ul class="list-group">
+                    <li class="list-item list-group-item">
+                        吃飯
+                        <a href="#" class="del btn btn-danger btn-sm float-right">刪除</a>
+                    </li>
+                    <li class="list-item list-group-item complete">
+                        洗衣服
+                        <a href="#" class="del btn btn-danger btn-sm float-right">刪除</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('#add').click(function(){
+                let input = $('#input').val();
+                let content = `
+                    <li class="list-item list-group-item">
+                        ${input}
+                        <a href="#" class="del btn btn-danger btn-sm float-right">刪除</a>
+                    </li>
+                `
+                $('.list-group').append(content);
+                $('#input').val('');
+            })
+        })
+    </script>
+</body>
+</html>
