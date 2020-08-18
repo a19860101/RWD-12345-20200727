@@ -59,6 +59,7 @@
             text-decoration: none;
             text-align: center;
             line-height: 50px;
+            display: none;
         }
     </style>
 </head>
@@ -95,6 +96,15 @@
                 $('html,body').animate({
                     scrollTop: 0
                 })
+            })
+            $(window).scroll(function(){
+                let h = $(this).scrollTop();
+                console.log(h);
+                if(h > 800){
+                    $('#gotop').show();
+                }else{
+                    $('#gotop').hide();
+                }
             })
         })
     </script>
