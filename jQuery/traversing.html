@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1 id="title">Hello Javascript</h1>
+    <p id="content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, recusandae! Eos vitae illum esse modi expedita dignissimos quidem minus est, beatae fugit commodi doloribus saepe excepturi accusamus dolores enim facere.
+    </p>
+    <a href="#">link</a>
+    <ul class="lists">
+        <li class="list">
+            <a href="#" class="list-link">list 1</a>
+        </li>
+        <li class="list">
+            <a href="#" class="list-link">list 2</a>
+        </li>
+        <li class="list">
+            <a href="#" class="list-link">list 3</a>
+        </li>
+        <li class="list">
+            <a href="#" class="list-link">list 4</a>
+        </li>
+    </ul>
+    <script>
+        $(function(){
+            // console.log($('.list').parent());
+            console.log($('.list').parents('body'));
+        })
+    </script>
+</body>
+</html>
