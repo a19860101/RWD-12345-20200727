@@ -30,7 +30,17 @@
     <script>
         $(function(){
             // console.log($('.list').parent());
-            console.log($('.list').parents('body'));
+            // console.log($('.list').parents());
+            // console.log($('.list').parents('body'));
+
+            // console.log($('#content').next());
+            // console.log($('#content').prev());
+            // console.log($('#content').siblings());
+            // console.log($('#content').siblings('.lists'));
+            console.log($('#content').eq(0));
+            console.log($('.list').eq(0).text());
+            console.log($('.list').eq(1).text());
+            console.log($('.list').eq(2).text());
         })
     </script>
 </body>
