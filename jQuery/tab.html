@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        * {
+            font-family: "Segoe UI";
+            margin: 0;
+            padding: 0;
+        }
+        #tabs {
+            width: 600px;
+            margin: auto;
+        }
+        .tab-nav {
+            background-color: #aaa;
+            display: flex;
+            position: relative;
+            z-index: 999;
+        }
+        .tab-link {
+            text-decoration: none;
+            display: block;
+            padding: 15px;
+            color: #000;
+            transition: .5s;
+        }
+        .tab-link.active {
+            background-color: #ccc;
+            transition: .5s;
+        }
+        .tab-panel {
+            background-color: #ccc;
+            padding: 15px;
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+            /* animation: fade-in .6s;; */
+        }
+        @keyframes fade-in{
+            from {
+                opacity: 0;
+                transform: translateY(-100%)
+            }
+            /* to {opacity: 1;} */
+        }
+    </style>
+</head>
+<body>
+    <div id="tabs">
+        <div class="tab-nav">
+            <a href="#tab-1" class="tab-link active">Tab 1</a>
+            <a href="#tab-2" class="tab-link">Tab 2</a>
+            <a href="#tab-3" class="tab-link">Tab 3</a>
+            <a href="#tab-4" class="tab-link">Tab 4</a>
+        </div>
+        <div id="tab-1" class="tab-panel active">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
+            </p>
+        </div>
+        <div id="tab-2" class="tab-panel">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
+            </p>
+        </div>
+        <div id="tab-3" class="tab-panel">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
+            </p>
+        </div>
+        <div id="tab-4" class="tab-panel">
+            <h2>title 4</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eveniet ea tempore amet non labore dolorem esse vel excepturi neque, placeat maiores perspiciatis quo porro ipsam commodi deleniti praesentium. Quaerat.
+            </p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.tab-link').click(function(){
+                let target = $(this).attr('href');
+                // $('.tab-panel').removeClass('active');
+                // $(target).addClass('active');
+
+                $('.tab-panel').hide();
+                $(target).fadeIn();;
+                // $(target).slideDown();;
+            })
+        })
+    </script>
+</body>
+</html>
