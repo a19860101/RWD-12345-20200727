@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI";
+        }
+        .modal {
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            /* display: none; */
+            display: flex;
+            opacity: 0;
+            z-index: -1;
+            transition: .3s;
+        }
+        .modal.active{
+            display: flex;
+            transition: .3s;
+            opacity: 1;
+            z-index: 10;
+            /* animation: fade-in 1s; */
+        }
+        .modal-overlay {
+            position: fixed;
+            background-color: rgba(0,0,0,.8);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        .modal-container {
+            width: 60%;
+            margin: auto;
+            background-color: #fff;
+            position: relative;
+            padding: 30px;
+            /* top: 200px; */
+        }
+        @keyframes fade-in{
+            from {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="modal-btn" data-open="#about" data-duration="600">about</a>
+    <a href="#" class="modal-btn" data-open="#contact" data-duration="600">Contact</a>
+
+    <div id="about" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header"></div>
+            <div class="modal-body">
+                <h2>About</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum laboriosam sint perspiciatis iste saepe odit reiciendis, tempora, eveniet quaerat recusandae laudantium facilis deleniti hic debitis praesentium odio dicta. Voluptate, mollitia.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-close">Close</a>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header"></div>
+            <div class="modal-body">
+                <h2>Contact</h2>
+                <form action="">
+                    <input type="text">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-close">Close</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.modal-btn').click(function(){
+                let open = $(this).data('open');
+                console.log(open);
+                $(open).addClass('active');
+            })
+            $('.modal-close,.modal-overlay').click(function(){
+                $('.modal').removeClass('active');
+            })
+        })
+    </script>
+</body>
+</html>
