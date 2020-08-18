@@ -32,15 +32,24 @@
             // console.log($('.list').parent());
             // console.log($('.list').parents());
             // console.log($('.list').parents('body'));
+            console.log($('.list-link').closest('.list'));
+            console.log($('.list-link').closest('.lists'));
+            console.log($('.list-link').closest('body'));
 
             // console.log($('#content').next());
             // console.log($('#content').prev());
             // console.log($('#content').siblings());
             // console.log($('#content').siblings('.lists'));
-            console.log($('#content').eq(0));
-            console.log($('.list').eq(0).text());
-            console.log($('.list').eq(1).text());
-            console.log($('.list').eq(2).text());
+            // console.log($('#content').eq(0));
+            // console.log($('.list').eq(0).text());
+            // console.log($('.list').eq(1).text());
+            // console.log($('.list').eq(2).text());
+
+            console.log($('body').children());
+            console.log($('body').children('#content'));
+            console.log($('body').children('.lists'));
+            console.log($('body').find('.list-link'));
+
         })
     </script>
 </body>
