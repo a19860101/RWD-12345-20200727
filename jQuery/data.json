@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "name":"MacBookAir",
+        "cpu":"1.1GHz 雙核心第 10 代 Intel Core i3 處理器",
+        "ssd":"256GB",
+        "gpu":"Intel Iris Plus Graphics"
+    },
+    {
+        "id":2,
+        "name":"MacBookAir",
+        "cpu":"1.1GHz 4 核心第 10 代 Intel Core i5 處理器",
+        "ssd":"512GB",
+        "gpu":"Intel Iris Plus Graphics"
+    },
+    {
+        "id":3,
+        "name":"MacBookPro",
+        "cpu":"1.4GHz 4 核心第 8 代 Intel Core i5 處理器",
+        "ssd":"256GB",
+        "gpu":"Intel Iris Plus Graphics 645"
+    }
+]
