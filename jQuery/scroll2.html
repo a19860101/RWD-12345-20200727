@@ -23,8 +23,14 @@
         nav a {
             text-decoration: none;
             color: #fff;
-            margin: 0 10px;
+            display: inline-block;
+            padding: 0 15px;
             text-transform: uppercase;
+            transition: .3s;
+        }
+        nav a.active {
+            background-color: #ff5067;
+            transition: .3s;
         }
         .container {
             display: flex;
@@ -65,7 +71,7 @@
 </head>
 <body>
     <nav>
-        <a href="#" data-target="#about">about</a>
+        <a href="#" data-target="#about" class="active">about</a>
         <a href="#" data-target="#service">service</a>
         <a href="#" data-target="#product">product</a>
         <a href="#" data-target="#contact">contact</a>
@@ -91,6 +97,10 @@
                 $('html,body').animate({
                     scrollTop: distance
                 })
+
+                $('nav').find('a').removeClass('active');
+                $(this).addClass('active');
+                
                 e.preventDefault();
             })
             $('#gotop').click(function(e){
