@@ -49,6 +49,7 @@ nav a {
         display: none;
     }
     .nav-collapse {
+        display: flex;
         flex-direction: row;
     }
     .nav-menu a {
