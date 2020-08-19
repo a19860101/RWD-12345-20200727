@@ -215,7 +215,7 @@ header p {
     }
 } */
 #gotop {
-    display: block;
+    display: none;
     position: fixed;
     right: 15px;
     bottom: 15px;

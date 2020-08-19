@@ -30,9 +30,20 @@ $(function(){
             scrollTop: offset
         })
     })
-    $('#gotop').click(function(){
+    $('#gotop').click(function(e){
         $('html,body').animate({
             scrollTop:0
         })
+        e.preventDefault();
+    })
+    $(window).scroll(function(e){
+        let h = $(this).scrollTop();
+        console.log(h);
+        if(h > 800){
+            $('#gotop').fadeIn();
+        }else{
+            $('#gotop').fadeOut();
+        }
+        
     })
 })
