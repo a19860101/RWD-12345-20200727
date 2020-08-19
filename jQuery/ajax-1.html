@@ -8,13 +8,30 @@
 
 </head>
 <body>
+    <div class="container">
+
+    </div>
     <script>
         $(function(){
             $.ajax({
                 url:'data.json',
                 dataType:'json',
                 success:function(data){
-                    console.log(data);
+                    data.forEach(function(e){
+                        let content = `
+                            <div>
+                                <h2>${e.name}</h2>
+                                <ul>
+                                    <li>${e.cpu}</li>
+                                    <li>${e.ram}</li>
+                                    <li>${e.gpu}</li>
+                                    <li>${e.ssd}</li>
+                                </ul>
+                            </div>
+                        `;
+                        $('.container').append(content)
+
+                    })
                 },
                 error:function(){
                     console.log('error');

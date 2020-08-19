@@ -3,6 +3,7 @@
         "id":1,
         "name":"MacBookAir",
         "cpu":"1.1GHz 雙核心第 10 代 Intel Core i3 處理器",
+        "ram":"8GB 3733MHz LPDDR4X 記憶體",
         "ssd":"256GB",
         "gpu":"Intel Iris Plus Graphics"
     },
@@ -10,14 +11,48 @@
         "id":2,
         "name":"MacBookAir",
         "cpu":"1.1GHz 4 核心第 10 代 Intel Core i5 處理器",
+        "ram":"8GB 3733MHz LPDDR4X 記憶體",
         "ssd":"512GB",
         "gpu":"Intel Iris Plus Graphics"
     },
     {
         "id":3,
-        "name":"MacBookPro",
+        "name":"MacBookPro 13",
         "cpu":"1.4GHz 4 核心第 8 代 Intel Core i5 處理器",
+        "ram":"8GB 2133MHz LPDDR3 記憶體",
         "ssd":"256GB",
         "gpu":"Intel Iris Plus Graphics 645"
+    },
+    {
+        "id":4,
+        "name":"MacBookPro 13",
+        "cpu":"1.4GHz 4 核心第 8 代 Intel Core i5 處理器",
+        "ram":"8GB 2133MHz LPDDR3 記憶體",
+        "ssd":"512GB",
+        "gpu":"Intel Iris Plus Graphics 645"
+    },
+    {
+        "id":5,
+        "name":"MacBookPro 13",
+        "cpu":"2.0GHz 4 核心第 10 代 Intel Core i5 處理器",
+        "ram":"16GB 3733MHz LPDDR4X 記憶體",
+        "ssd":"512GB",
+        "gpu":"Intel Iris Plus Graphics"
+    },
+    {
+        "id":6,
+        "name":"MacBookPro 13",
+        "cpu":"2.0GHz 4 核心第 10 代 Intel Core i5 處理器",
+        "ram":"16GB 3733MHz LPDDR4X 記憶體",
+        "ssd":"1TB",
+        "gpu":"Intel Iris Plus Graphics"
+    },
+    {
+        "id":7,
+        "name":"MacBookPro 16",
+        "cpu":"2.6GHz 6 核心第 9 代 Intel Core i7 處理器",
+        "ram":"16GB 2666MHz DDR4 記憶體",
+        "ssd":"512TB",
+        "gpu":"AMD Radeon Pro 5300M 配備 4GB GDDR6 記憶體"
     }
 ]
