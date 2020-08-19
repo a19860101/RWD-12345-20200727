@@ -14,7 +14,10 @@
     <script>
         $(function(){
             $.ajax({
-                url:'https://picsum.photos/v2/list',
+                url:'https://picsum.photos/v2/list/',
+                data:{
+                    limit: 100
+                },
                 dataType:'json',
                 success:function(data){
                     data.forEach(function(e){
