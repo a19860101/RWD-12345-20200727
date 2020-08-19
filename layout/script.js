@@ -23,4 +23,11 @@ $(function(){
             $('.nav-collapse').hide();
         }
     });
+    $('a[data-target]').click(function(){
+        let target = $(this).data('target');
+        let offset = $(target).offset().top;
+        $('html,body').animate({
+            scrollTop: offset
+        })
+    })
 })

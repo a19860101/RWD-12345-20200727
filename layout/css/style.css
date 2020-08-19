@@ -4,7 +4,8 @@ nav {
     display: flex;
     flex-direction: column;
     line-height: 60px;
-    position: relative;
+    position: fixed;
+    z-index: 999;
 }
 nav a {
     color: #eee;
