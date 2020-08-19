@@ -98,9 +98,9 @@
                     scrollTop: distance
                 })
 
-                $('nav').find('a').removeClass('active');
-                $(this).addClass('active');
-                
+                // $('nav').find('a').removeClass('active');
+                // $(this).addClass('active');
+
                 e.preventDefault();
             })
             $('#gotop').click(function(e){
@@ -112,7 +112,7 @@
             })
             $(window).scroll(function(){
                 let h = $(this).scrollTop();
-                console.log(h);
+                // console.log(h);
                 if(h > 800){
                     // $('#gotop').show();
                     $('#gotop').fadeIn();
@@ -120,7 +120,18 @@
                     // $('#gotop').hide();
                     $('#gotop').fadeOut();
                 }
+
+                $('nav').find('a').each(function(){
+                    let target = $(this).data('target');
+                    let offset = $(target).offset().top;
+                    console.log(offset);
+                    if(h > offset - 100){
+                        $('nav').find('a').removeClass('active');
+                        $(this).addClass('active');
+                    }
+                })
             })
+           
         })
     </script>
 </body>
