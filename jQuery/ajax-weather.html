@@ -24,8 +24,10 @@
                     console.log(data);
                     let content = `
                         <div class="box">
-                            <h2>今日天氣 ${data.weather[0].description}</h2>
-                            <div>體感溫度 ${data.main.feels_like}</div>
+                            <h2>今日天氣 ${data.weather[0].description} <br>氣溫${data.main.temp}&deg;C</h2>
+                            <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
+                            <div>體感溫度 ${data.main.feels_like}&deg;C</div>
+                            <div>最高溫${data.main.temp_max}&deg;C | 最低溫 ${data.main.temp_min}&deg;C</div>
                         </div>
                     `;
                     $('.container').append(content);
