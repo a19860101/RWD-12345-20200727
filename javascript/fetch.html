@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json')
+        .then(function(res){
+            return res.json();
+        })
+        .then(function(data){
+            console.log(data);
+            return data;
+        })
+//     fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json')
+//     .then(res => res.json())
+//     .then(data => data);
+    </script>
+</body>
+</html>
