@@ -8,9 +8,20 @@
 
 </head>
 <body>
+    <select id="city">
+        <option>--請選擇--</option>
+        <option value="Taipei">台北</option>
+        <option value="Tokyo">東京</option>
+        <option value="Bangkok">曼谷</option>
+        <option value="Seoul">首爾</option>
+    </select>
     <div class="container"></div>
     <script>
         $(function(){
+            $('#city').change(function(){
+                let city = $(this).val();
+                console.log(city);
+            })
             $.ajax({
                 url: 'https://api.openweathermap.org/data/2.5/weather',
                 data:{
