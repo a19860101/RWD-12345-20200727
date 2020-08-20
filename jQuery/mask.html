@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <script>
+        $(function(){
+            $.ajax({
+                url:'https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json',
+                dataType:'json',
+                success:function(data){
+                    console.log(data);
+                    data.features.forEach(function({properties:p}){
+                        // console.log(p);
+                        console.log('名稱',p.name);
+                        console.log('地址',p.address);
+                        console.log('成人口罩數量',p.mask_adult);
+                        console.log('兒童口罩數量',p.mask_child);
+                        console.log('--------------------------')
+                    })
+                },
+                error:function(){}
+            })
+        })
+    </script>
+</body>
+</html>
