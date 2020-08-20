@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI","Microsoft Jhenghei";
+        }
+    </style>
 </head>
 <body>
     <select id="city">
@@ -37,14 +43,24 @@
                     dataType:'json',
                     success:function(e){
                         console.log(e);
-                        e.list.forEach(function({main,weather,dt_txt}){
+                        e.list.forEach(function({main,weather,dt_txt,dt}){
+                            let myDate = new Date(dt * 1000);
+                            let D = myDate.getDay();
+                            let m = myDate.getMonth()+1;
+                            let d = myDate.getDate()+1;
+                            let time = `${myDate.getHours()}時`;
+                            const DAY = ['日','一','二','三','四','五','六'];
+                            const DAY_US = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+                            const DAY_JP = ['日','月','火','水','木','金','土'];
                             let content = `
                                 <div class="box">
+                                    <h1>${m}/${d} (${DAY_JP[D]}) ${time}</h1>
                                     <h2>天氣 ${weather[0].description} <br>氣溫${main.temp}&deg;C</h2>
                                     <div>${dt_txt}</div>
                                     <img src="http://openweathermap.org/img/wn/${weather[0].icon}@2x.png">
                                     <div>體感溫度 ${main.feels_like}&deg;C</div>
                                     <div>最高溫${main.temp_max}&deg;C | 最低溫 ${main.temp_min}&deg;C</div>
+                                    <hr>
                                 </div>
                             `;
                             $('.container').append(content).hide().fadeIn();
