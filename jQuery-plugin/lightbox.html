@@ -14,14 +14,23 @@
     </style>
 </head>
 <body>
-    <a href="https://picsum.photos/id/65/1200/800" data-lightbox="g">
+    <a href="https://picsum.photos/id/65/1200/800" data-lightbox="g" data-title="title 1">
         <img src="https://picsum.photos/id/65/1200/800" alt="">
     </a>
-    <a href="https://picsum.photos/id/66/1200/800" data-lightbox="g">
+    <a href="https://picsum.photos/id/66/1200/800" data-lightbox="g" data-title="title 2">
         <img src="https://picsum.photos/id/66/1200/800" alt="">
     </a>
-    <a href="https://picsum.photos/id/67/1200/800" data-lightbox="g">
+    <a href="https://picsum.photos/id/67/1200/800" data-lightbox="g" data-title="title 3">
         <img src="https://picsum.photos/id/67/1200/800" alt="">
     </a>
+    <script>
+        lightbox.option({
+            fadeDuration: 600,
+            imageFadeDuration:600,
+            resizeDuration: 600,
+            showImageNumberLabel: true,            
+            albumLabel: '%1 / %2'
+        })
+    </script>
 </body>
 </html>
