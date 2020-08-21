@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <style>
+        /* .owl-theme .owl-nav [class*=owl-] {
+            color: #fa0;
+            background: transparent;
+        }
+        .owl-theme .owl-nav [class*=owl-]:hover {
+            background: transparent;
+            color: #08ccfd;
+        } */
+        .owl-next,.owl-prev {
+            color: #000!important;
+            background: transparent!important;
+        }
+        .owl-next:hover,.owl-prev:hover {
+            color: #fa0!important;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -65,9 +82,11 @@
                 autoplayHoverPause: true,
                 stagePadding: 150,
                 dots: true,
+                dotsSpeed: 1000,
                 nav: true,
                 navText: ['<i class="fas fa-chevron-circle-left fa-lg"></i>','<i class="fas fa-chevron-circle-right fa-lg"></i>'],
-                navElement: 'a'
+                navElement: 'a',
+                navSpeed: 1000
             });
             $('#products').owlCarousel({
                 items: 6,
