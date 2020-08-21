@@ -20,6 +20,39 @@
             <img src="https://picsum.photos/id/87/1600/800" alt="">
         </div>
     </header>
+
+    <div id="products" class="owl-carousel">
+        <a href="#">
+            <img src="https://picsum.photos/id/4/200" alt="">
+        </a>
+        <a href="#">
+            <img src="https://picsum.photos/id/14/200" alt="">
+        </a>
+        <a href="#">
+            <img src="https://picsum.photos/id/24/200" alt="">
+        </a>
+        <a href="#">
+            <img src="https://picsum.photos/id/34/200" alt="">
+        </a>
+        <a href="#">
+            <img src="https://picsum.photos/id/44/200" alt="">
+        </a>
+        <a href="#">
+            <img src="https://picsum.photos/id/54/200" alt="">
+        </a>
+        <a href="#">
+            <img src="https://picsum.photos/id/64/200" alt="">
+        </a>
+        <a href="#">
+            <img src="https://picsum.photos/id/74/200" alt="">
+        </a>
+        <a href="#">
+            <img src="https://picsum.photos/id/84/200" alt="">
+        </a>
+        <a href="#">
+            <img src="https://picsum.photos/id/94/200" alt="">
+        </a>
+    </div>
     <script>
         $(function(){
             $('#slider').owlCarousel({
@@ -28,8 +61,15 @@
                 loop: true,
                 autoplaySpeed: 1000,
                 autoplayTimeout: 3000,
-                autoplayHoverPause: true
+                autoplayHoverPause: true,
+                stagePadding: 150
             });
+            $('#products').owlCarousel({
+                items: 6,
+                margin: 10,
+                center:true,
+                loop:true
+            })
         })
     </script>
 </body>
