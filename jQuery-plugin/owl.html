@@ -6,12 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </head>
 <body>
     <header>
-        <div id="slider" class="owl-carousel">
+        <div id="slider" class="owl-carousel owl-theme">
             <img src="https://picsum.photos/id/36/1600/800" alt="">
             <img src="https://picsum.photos/id/46/1600/800" alt="">
             <img src="https://picsum.photos/id/56/1600/800" alt="">
@@ -62,7 +63,11 @@
                 autoplaySpeed: 1000,
                 autoplayTimeout: 3000,
                 autoplayHoverPause: true,
-                stagePadding: 150
+                stagePadding: 150,
+                dots: true,
+                nav: true,
+                navText: ['<i class="fas fa-chevron-circle-left fa-lg"></i>','<i class="fas fa-chevron-circle-right fa-lg"></i>'],
+                navElement: 'a'
             });
             $('#products').owlCarousel({
                 items: 6,
