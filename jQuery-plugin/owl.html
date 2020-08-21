@@ -11,14 +11,23 @@
 </head>
 <body>
     <header>
-        <div id="slider">
+        <div id="slider" class="owl-carousel">
             <img src="https://picsum.photos/id/36/1600/800" alt="">
             <img src="https://picsum.photos/id/46/1600/800" alt="">
             <img src="https://picsum.photos/id/56/1600/800" alt="">
             <img src="https://picsum.photos/id/66/1600/800" alt="">
             <img src="https://picsum.photos/id/76/1600/800" alt="">
-            <img src="https://picsum.photos/id/86/1600/800" alt="">
+            <img src="https://picsum.photos/id/87/1600/800" alt="">
         </div>
     </header>
+    <script>
+        $(function(){
+            $('#slider').owlCarousel({
+                items: 1,
+                autoplay: true,
+                loop: true
+            });
+        })
+    </script>
 </body>
 </html>
