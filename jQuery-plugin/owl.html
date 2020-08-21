@@ -21,10 +21,20 @@
         .owl-next,.owl-prev {
             color: #000!important;
             background: transparent!important;
+            position: absolute;
         }
         .owl-next:hover,.owl-prev:hover {
             color: #fa0!important;
         }
+        .owl-next {
+            top: 45%;
+            right: 0;
+        }
+        .owl-prev {
+            left: 0;
+            top: 45%;
+        }
+
     </style>
 </head>
 <body>
@@ -84,7 +94,7 @@
                 dots: true,
                 dotsSpeed: 1000,
                 nav: true,
-                navText: ['<i class="fas fa-chevron-circle-left fa-lg"></i>','<i class="fas fa-chevron-circle-right fa-lg"></i>'],
+                navText: ['<i class="fas fa-chevron-circle-left fa-3x"></i>','<i class="fas fa-chevron-circle-right fa-3x"></i>'],
                 navElement: 'a',
                 navSpeed: 1000
             });
