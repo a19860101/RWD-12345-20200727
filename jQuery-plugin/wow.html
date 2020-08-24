@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.compat.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -90,16 +92,16 @@
     </nav>    
     <div class="container" id="about">
         <div class="box">
-            <h1>About</h1>
-            <p>
+            <h1 class="wow fadeInDown">About</h1>
+            <p class="wow fadeInUp">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, debitis temporibus. Laudantium modi ratione quaerat doloribus aut laborum voluptas, vero labore eveniet corporis? Debitis, iusto inventore officia molestias ab dolorum?
             </p>
         </div>
     </div>
     <div class="container" id="service">
         <div class="box">
-            <h1>Service</h1>
-            <p>
+            <h1 class="wow fadeInLeft">Service</h1>
+            <p class="wow fadeInRight">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minima sit porro quod obcaecati officia dignissimos error ut accusantium consectetur. Sit unde iusto molestiae eaque quibusdam mollitia ab molestias consequatur!
             </p>
             <a href="#">MORE</a>
@@ -125,6 +127,7 @@
     </div>
     <a href="#" id="gotop">TOP</a>
     <script>
+        new WOW().init();
         $(function(){
             $('nav').find('a').click(function(e){
                 let target = $(this).data('target');
