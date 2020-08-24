@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -43,7 +45,9 @@
                         // console.log(e.download_url);
                         let content = `
                             <div class="box">
-                                <img src="${e.download_url}" >    
+                                <a href="${e.download_url}" data-fancybox="g" data-caption="${e.author}">
+                                    <img src="${e.download_url}" >    
+                                </a>
                             </div>
                         `;
                         $('.container').append(content);
