@@ -16,9 +16,13 @@
         }
         img {
             width: 100%;
+            vertical-align: top;
         }
         .box {
             width: 400px;
+        }
+        .container {
+            margin: auto;
         }
     </style>
 </head>
@@ -44,10 +48,16 @@
                         `;
                         $('.container').append(content);
                     })
+                    $('.container').imagesLoaded(function(){
+                        $('.container').masonry({
+                            isFitWidth: true
+                        });
+                    })
                 },
                 error:function(){}
 
             })
+            
         })
     </script>
 </body>
