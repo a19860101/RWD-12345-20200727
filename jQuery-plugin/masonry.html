@@ -12,6 +12,11 @@
             margin: 0;
             padding: 0;
             font-family: "Segoe UI";
+            box-sizing: border-box;
+        }
+        .container {
+            /* width: 880px; */
+            margin: auto;
         }
         .box {
             width: 200px;
@@ -21,6 +26,13 @@
         }
 
     </style>
+    <script>
+        $(function(){
+            $('.container').masonry({
+                isFitWidth: true
+            });
+        })
+    </script>
 </head>
 <body>
     <div class="container">
