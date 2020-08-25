@@ -12,7 +12,7 @@
         <input type="text" v-model="input"><button @click="add()">新增項目</button>    
         <ul>
             <li v-for="(list,idx) in lists">
-                {{list}}
+                {{list.name}} -- {{list.id}}
                 <a href="#" @click.prevent="del(idx)">刪除</a>
             </li>
         </ul>
@@ -21,13 +21,33 @@
         Vue.createApp({
             data(){
                 return {
-                    lists:['list 1','list 2','list 3'],
+                    lists:[
+                        {
+                            id:1,
+                            name:'list 1',
+                            isComplete: false
+                        },
+                        {
+                            id:2,
+                            name:'list 2',
+                            isComplete: false
+                        },
+                        {
+                            id:3,
+                            name:'list 3',
+                            isComplete: false
+                        }
+                    ],
                     input: ''
                 }
             },
             methods:{
                 add(){
-                    this.lists.push(this.input);
+                    this.lists.push({
+                        id: Date.now(),
+                        name:this.input,
+                        isComplete: false
+                    });
                     this.input=''
                 },
                 del(idx){
