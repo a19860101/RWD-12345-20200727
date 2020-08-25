@@ -9,6 +9,8 @@
 </head>
 <body>
     <div id="qwerty">
+        <input type="text" v-model="input">
+        <div>{{ input }}</div>
         <button v-on:click="test()">CLICK</button>
         <button @click="test()">CLICK 2</button>
     </div>
@@ -16,12 +18,12 @@
         Vue.createApp({
             data(){
                 return {
-
+                    input:''
                 }
             },
             methods:{
                 test(){
-                    alert('HELLO VUE3 !!!');
+                    alert(this.input);
                 }
             }
         }).mount('#qwerty')
