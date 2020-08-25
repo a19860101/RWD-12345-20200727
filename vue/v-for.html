@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+        <ol>
+            <li v-for="drink in drinks">{{ drink }}</li>
+        </ol>
+        <ol>
+            <li v-for="drink of drinks">{{ drink }}</li>
+        </ol>
+        <div v-for="user in users">
+            <h2>{{ user.name }}</h2>
+            <p>{{ user.mail }}</p>
+        </div>
+        <div v-for="n in 50">{{ n }}</div>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    drinks:[
+                        '紅茶',
+                        '綠茶',
+                        '奶茶',
+                        '珍珠奶茶'
+                    ],
+                    users: [
+                        {
+                            id: 1,
+                            name: 'John',
+                            mail: 'asdf@gmail.com'
+                        },
+                        {
+                            id: 2,
+                            name: 'Mary',
+                            mail: 'zxcv@gmail.com'
+                        },
+                        {
+                            id: 3,
+                            name: 'Ben',
+                            mail: 'abfdbdbfsdfb@gmail.com'
+                        },
+                    ]
+                }
+            }
+        }).mount('#app')
+
+    </script>
+</body>
+</html>
