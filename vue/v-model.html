@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="input">
+        <div>{{ input }}</div>
+
+        <input type="radio" name="gender" v-model="gender" value="男">
+        <input type="radio" name="gender" v-model="gender" value="女">
+        <div>
+            {{gender}}
+        </div>
+        <select name="" id="" v-model="city">
+            <option value="Taipei">台北</option>
+            <option value="Taoyuan">桃園</option>
+            <option value="Hsinchu">新竹</option>
+        </select>
+        <div>{{city}}</div>
+    </div>    
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    input: 'default',
+                    gender: '',
+                    city: ''
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>

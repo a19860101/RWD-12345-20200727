@@ -10,10 +10,10 @@
 <body>
     <div id="app">
         <ol>
-            <li v-for="drink in drinks">{{ drink }}</li>
+            <li v-for="(drink,idx) in drinks">{{ drink }} -- {{ idx }}</li>
         </ol>
         <ol>
-            <li v-for="drink of drinks">{{ drink }}</li>
+            <li v-for="(drink,idx) of drinks">{{ drink }} -- {{ idx }}</li>
         </ol>
         <div v-for="user in users">
             <h2>{{ user.name }}</h2>
@@ -29,7 +29,8 @@
                         '紅茶',
                         '綠茶',
                         '奶茶',
-                        '珍珠奶茶'
+                        '珍珠奶茶',
+                        '冰淇淋紅茶'
                     ],
                     users: [
                         {
