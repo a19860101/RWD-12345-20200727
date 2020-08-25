@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="input"><button @click="add()">新增項目</button>    
+        <ul>
+            <li v-for="list in lists">{{list}}</li>
+        </ul>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    lists:['list 1','list 2','list 3'],
+                    input: ''
+                }
+            },
+            methods:{
+                add(){
+                    this.lists.push(this.input);
+                    this.input=''
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
