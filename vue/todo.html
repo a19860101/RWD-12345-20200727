@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        .complete {
+            text-decoration: line-through;
+            color: #666;
+        }
 
+    </style>
 </head>
 <body>
     <div id="app">
         <input type="text" v-model="input"><button @click="add()">新增項目</button>    
         <ul>
-            <li v-for="(list,idx) in lists">
+            <li v-for="(list,idx) in lists" :class="{complete: list.isComplete}">
                 {{list.name}} -- {{list.id}}
                 <a href="#" @click.prevent="del(idx)">刪除</a>
             </li>
@@ -30,7 +36,7 @@
                         {
                             id:2,
                             name:'list 2',
-                            isComplete: false
+                            isComplete: true
                         },
                         {
                             id:3,
@@ -38,7 +44,8 @@
                             isComplete: false
                         }
                     ],
-                    input: ''
+                    input: '',
+                    test: false
                 }
             },
             methods:{
