@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <!-- https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json -->
+    <div id="app">
+        {{ masks }}
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    masks:''
+                }
+            },
+            mounted(){
+                fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json')
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data.features);
+                })
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
