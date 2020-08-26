@@ -14,7 +14,7 @@
         <div data-role="zipcode" style="display: none;"></div>
     </div>
     <div id="app">
-        
+        <button @click="mask()">查詢</button>
         <!-- <div v-for="mask in masks">
             <h1>{{ mask.properties.name}}</h1>
             <div>地址: {{ mask.properties.address}}</div>
@@ -30,17 +30,26 @@
         Vue.createApp({
             data(){
                 return {
-                    masks:[]
+                    masks:[],
+                    county:'',
+                    district:''
                 }
             },
-            created(){
-                fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json')
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data.features);
-                    this.masks = data.features
-                })
+            methods:{
+                mask(){
+                    this.county = twzipcode.get('county')[0];
+                    this.district = twzipcode.get('district')[0];
+                    console.log(this.county,this.district);
+                }
             }
+            // created(){
+            //     fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json')
+            //     .then(res => res.json())
+            //     .then(data => {
+            //         console.log(data.features);
+            //         this.masks = data.features
+            //     })
+            // }
         }).mount('#app')
     </script>
 </body>
