@@ -5,44 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
-
+    <style>
+        .colorBox {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #000;
+            display: inline-block;
+            list-style: none;
+        }
+    </style>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <h2>{{ title }}</h2>
+        <img :src="img" alt="">
+        <ul>
+            <li v-for="info in infos">{{info}}</li>
+        </ul>
+        <ul>
+            <li v-for="p in products" class="colorBox" :style="{backgroundColor:p.color}">
+                
+            </li>
+        </ul>
+    </div>
     <script>
         Vue.createApp({
             data(){
                 return {
+                    title:'純棉圓領T恤',
+                    img:'./images/4630101_500.jpg',
+                    infos:[
+                        '純棉100%',
+                        '產地:台灣'
+                    ],
                     products:[
                         {
                             id:1,
-                            name:'純棉圓領T恤- 1',
                             img: './images/4630101_500.jpg',
-                            color:'yello'
+                            color: '#fe0',
+                            colorName: '雞蛋黃'
                         },
                         {
                             id:2,
-                            name:'純棉圓領T恤- 2',
                             img: './images/4630102_500.jpg',
-                            color:'red'
+                            color:'#f00',
+                            colorName: '酒紅'
                         },
                         {
                             id:3,
-                            name:'純棉圓領T恤- 3',
                             img: './images/4630103_500.jpg',
-                            color:'cyan'
+                            color:'cyan',
+                            colorName:'湖水藍'
                         },
                         {
                             id:4,
-                            name:'純棉圓領T恤- 4',
                             img: './images/4630104_500.jpg',
-                            color:'gray'
+                            color:'gray',
+                            colorName: '質感灰'
                         },
                         {
                             id:5,
-                            name:'純棉圓領T恤- 5',
                             img: './images/4630105_500.jpg',
-                            color:'navy'
+                            color:'navy',
+                            colorName: '藏青'
                         }
                     ]
                 }
