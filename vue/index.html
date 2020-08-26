@@ -19,6 +19,7 @@
     <div id="app">
         <h2>{{ title }}</h2>
         <img :src="img" alt="">
+        <div>{{ colorName }}</div>
         <ul>
             <li v-for="info in infos">{{info}}</li>
         </ul>
@@ -30,9 +31,10 @@
             </li>
         </ul>
         <div>
-            <div> 熱賣中 </div>
-            <div> 低庫存 </div>
-            <div> 補貨中 </div>
+            <div>庫存量: {{ instock }}</div>
+            <div v-if="instock >= 10"> 熱賣中 </div>
+            <div v-else-if="instock > 0"> 低庫存 </div>
+            <div v-else> 補貨中 </div>
         </div>
     </div>
     <script>
@@ -96,6 +98,12 @@
             computed:{
                 img(){
                   return this.products[this.selectedIdx].img
+                },
+                instock(){
+                    return this.products[this.selectedIdx].quantity;
+                },
+                colorName(){
+                    return  this.products[this.selectedIdx].colorName;
                 }
             }
         }).mount('#app')
