@@ -16,12 +16,15 @@
     <div id="app">
         <button @click="mask()">查詢</button>
         <div v-for="mask in masks">
-            <h1>{{ mask.properties.name}}</h1>
-            <div>地址: {{ mask.properties.address}}</div>
-            <div>電話: {{ mask.properties.phone }}</div>
-            <div>
-                成人口罩: {{mask.properties.mask_adult}}
-                兒童口罩: {{mask.properties.mask_child}}
+            <div v-if="mask.properties.town == district">
+                {{mask.properties.town}}
+                <h1>{{ mask.properties.name}}</h1>
+                <div>地址: {{ mask.properties.address}}</div>
+                <div>電話: {{ mask.properties.phone }}</div>
+                <div>
+                    成人口罩: {{mask.properties.mask_adult}}
+                    兒童口罩: {{mask.properties.mask_child}}
+                </div>
             </div>
         </div>
     </div>
