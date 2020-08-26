@@ -15,7 +15,7 @@
     </div>
     <div id="app">
         <button @click="mask()">查詢</button>
-        <!-- <div v-for="mask in masks">
+        <div v-for="mask in masks">
             <h1>{{ mask.properties.name}}</h1>
             <div>地址: {{ mask.properties.address}}</div>
             <div>電話: {{ mask.properties.phone }}</div>
@@ -23,7 +23,7 @@
                 成人口罩: {{mask.properties.mask_adult}}
                 兒童口罩: {{mask.properties.mask_child}}
             </div>
-        </div> -->
+        </div>
     </div>
     <script>
         let twzipcode = new TWzipcode('.twzipcode');
@@ -40,6 +40,12 @@
                     this.county = twzipcode.get('county')[0];
                     this.district = twzipcode.get('district')[0];
                     console.log(this.county,this.district);
+                    fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json')
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data.features);
+                        this.masks = data.features
+                    })
                 }
             }
             // created(){
