@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
-
+    <script src="js/twzipcode.js"></script>
 </head>
 <body>
-    <!-- https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json -->
+    <div class="twzipcode">
+        <div data-role="county"></div>
+        <div data-role="district"></div>
+        <div data-role="zipcode" style="display: none;"></div>
+    </div>
     <div id="app">
-        <div v-for="mask in masks">
+        
+        <!-- <div v-for="mask in masks">
             <h1>{{ mask.properties.name}}</h1>
             <div>地址: {{ mask.properties.address}}</div>
             <div>電話: {{ mask.properties.phone }}</div>
@@ -18,9 +23,10 @@
                 成人口罩: {{mask.properties.mask_adult}}
                 兒童口罩: {{mask.properties.mask_child}}
             </div>
-        </div>
+        </div> -->
     </div>
     <script>
+        let twzipcode = new TWzipcode('.twzipcode');
         Vue.createApp({
             data(){
                 return {
