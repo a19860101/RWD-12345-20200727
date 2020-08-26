@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    products:[
+                        {
+                            id:1,
+                            name:'純棉圓領T恤- 1',
+                            img: './images/4630101_500.jpg',
+                            color:'yello'
+                        },
+                        {
+                            id:2,
+                            name:'純棉圓領T恤- 2',
+                            img: './images/4630102_500.jpg',
+                            color:'red'
+                        },
+                        {
+                            id:3,
+                            name:'純棉圓領T恤- 3',
+                            img: './images/4630103_500.jpg',
+                            color:'cyan'
+                        },
+                        {
+                            id:4,
+                            name:'純棉圓領T恤- 4',
+                            img: './images/4630104_500.jpg',
+                            color:'gray'
+                        },
+                        {
+                            id:5,
+                            name:'純棉圓領T恤- 5',
+                            img: './images/4630105_500.jpg',
+                            color:'navy'
+                        }
+                    ]
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
