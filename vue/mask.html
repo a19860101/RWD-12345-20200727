@@ -10,20 +10,29 @@
 <body>
     <!-- https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json -->
     <div id="app">
-        {{ masks }}
+        <div v-for="mask in masks">
+            <h1>{{ mask.properties.name}}</h1>
+            <div>地址: {{ mask.properties.address}}</div>
+            <div>電話: {{ mask.properties.phone }}</div>
+            <div>
+                成人口罩: {{mask.properties.mask_adult}}
+                兒童口罩: {{mask.properties.mask_child}}
+            </div>
+        </div>
     </div>
     <script>
         Vue.createApp({
             data(){
                 return {
-                    masks:''
+                    masks:[]
                 }
             },
-            mounted(){
+            created(){
                 fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json')
                 .then(res => res.json())
                 .then(data => {
                     console.log(data.features);
+                    this.masks = data.features
                 })
             }
         }).mount('#app')
