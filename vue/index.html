@@ -23,7 +23,7 @@
             <li v-for="info in infos">{{info}}</li>
         </ul>
         <ul>
-            <li v-for="p in products" class="colorBox" :style="{backgroundColor:p.color}">
+            <li v-for="(p,idx) in products" class="colorBox" :style="{backgroundColor:p.color}" @click="changeColor(idx)">
                 
             </li>
         </ul>
@@ -70,6 +70,11 @@
                             colorName: '藏青'
                         }
                     ]
+                }
+            },
+            methods:{
+                changeColor(idx){
+                    this.img = this.products[idx].img;
                 }
             }
         }).mount('#app')
